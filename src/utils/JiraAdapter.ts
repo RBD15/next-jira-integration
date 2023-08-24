@@ -3,7 +3,7 @@ import { GanttDataType } from "react-virtual-gantt";
 export class JiraAdapter{
 
   private rawData: any;
-  private data: GanttDataType[];
+  private data: GanttDataType[] = [];
   
   constructor(rawData: any) {
     this.rawData = rawData

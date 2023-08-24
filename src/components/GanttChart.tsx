@@ -1,11 +1,11 @@
 import { JiraAdapter } from '@/utils/JiraAdapter'
 import { getIssues, getProjects } from '@/utils/jiraData'
 import React, { useEffect, useState } from 'react'
-import { Gantt } from 'react-virtual-gantt'
+import { Gantt, GanttDataType } from 'react-virtual-gantt'
 
 export const GanttChart = () => {
 
-  const [issues,setIssues] = useState([])
+  const [issues,setIssues] = useState<GanttDataType[]>([])
   const [projects,setProjects] = useState([])
   
   const getIssuesByProjectId = async()=>{
