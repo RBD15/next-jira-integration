@@ -1,10 +1,10 @@
 import { JiraAdapter } from "@/utils/JiraAdapter";
 import Main from "./Main";
 import { getIssues, getProjects } from "@/utils/jiraData";
-
+import { GanttDataType } from "react-virtual-gantt";
 
 export const getStaticProps = async () => {
-  const issues = await processData()
+  const issues: GanttDataType[] = await processData()
   const projects = await getProject();
   return {
     props: {
@@ -29,7 +29,7 @@ const getProject = async()=>{
   return await getProjects();
 }
 
-export default function Home({issues,projects}) {
+export default function Home({issues, projects}: {issues: GanttDataType[], projects: any}) {
   return (
     <Main issues={issues} projects={projects} ></Main>
   )

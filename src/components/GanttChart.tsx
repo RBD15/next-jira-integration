@@ -1,7 +1,8 @@
 import React from 'react'
 import { Gantt} from 'react-virtual-gantt'
+import { GanttDataType } from "react-virtual-gantt";
 
-export const GanttChart = ({issues, projects}) => {
+export const GanttChart = ({issues, projects}: {issues: GanttDataType[], projects: any}) => {
 
   return (
       (()=>{
