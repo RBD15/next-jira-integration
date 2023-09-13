@@ -1,9 +1,9 @@
 import { GanttChart } from '@/components/GanttChart'
 import React from 'react'
 
-const Main = () => {
+const Main = ({issues, projects}) => {
   return (
-    <GanttChart></GanttChart>
+    <GanttChart issues={issues} projects={projects} ></GanttChart>
   )
 }
 

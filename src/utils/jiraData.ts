@@ -11,6 +11,10 @@ export const getProjects = async() => {
   const result = await axios.get(url, {headers})
   return result.data
 
+  // return {
+  //   props: {projects: result.data}
+  // }
+
 }
 
 export const getIssues = async(idProject: number) => {
