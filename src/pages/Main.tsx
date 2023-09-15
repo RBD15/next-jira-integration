@@ -4,7 +4,7 @@ import { GanttDataType } from "react-virtual-gantt";
 
 const Main = ({issues = [], projects}: {issues: GanttDataType[], projects: any}) => {
   return (
-    <GanttChart issues={issues} projects={projects} ></GanttChart>
+    <GanttChart issues={issues} ></GanttChart>
   )
 }
 
