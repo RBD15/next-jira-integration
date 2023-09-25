@@ -1,7 +1,13 @@
-import { JiraAdapter } from "@/utils/JiraAdapter";
 import Main from "./Main";
-import { getIssues, getProjects } from "@/utils/jiraData";
 import { GanttDataType } from "react-virtual-gantt";
+import { Login } from "./login";
+
+import { JiraAdapter } from "@/utils/JiraAdapter";
+import { getIssues, getProjects } from "@/utils/jiraData";
+import { useContext } from "react"
+import { authContext } from "@/context/global";
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const getStaticProps = async () => {
   const issues: GanttDataType[] = await processData()
@@ -30,7 +36,10 @@ const getProject = async()=>{
 }
 
 export default function Home({issues, projects}: {issues: GanttDataType[], projects: any}) {
+  const {auth} = useContext(authContext)
   return (
-    <Main issues={issues} projects={projects} ></Main>
+      (auth.email == undefined) 
+      ? <Login/>
+      : <Main issues={issues} projects={projects}/>
   )
 }
