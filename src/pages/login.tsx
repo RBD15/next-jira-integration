@@ -25,7 +25,7 @@ export const Login = () => {
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  const loginSubmit = async (e: any) => {
+  const loginSubmit = async (e) => {
     e.preventDefault()
     const emailSubmit = email.current.value
     const passwordSubmit = password.current.value
