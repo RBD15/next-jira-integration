@@ -1,6 +1,6 @@
 import Main from "./Main";
 import { GanttDataType } from "react-virtual-gantt";
-import { Login } from "./login";
+import Login from "./login";
 
 import { JiraAdapter } from "@/utils/JiraAdapter";
 import { getIssues, getProjects } from "@/utils/jiraData";
