@@ -7,7 +7,7 @@ import { authContext } from '@/context/global';
 import { useRouter } from 'next/navigation';
 
 
-export const Login = () => {
+const Login = () => {
   const email: any = useRef(null)
   const password: any = useRef(null)
   const context: any = useContext(authContext)
@@ -124,3 +124,5 @@ export const Login = () => {
   </div>
   )
 }
+
+export default Login
