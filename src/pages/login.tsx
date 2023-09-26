@@ -8,9 +8,9 @@ import { useRouter } from 'next/navigation';
 
 
 export const Login = () => {
-  const email = useRef(null)
-  const password = useRef(null)
-  const context = useContext(authContext)
+  const email: any = useRef(null)
+  const password: any = useRef(null)
+  const context: any = useContext(authContext)
   const router = useRouter()
 
   const firebaseConfig = {
